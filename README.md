@@ -12,7 +12,7 @@ Tested on Lua 5.1 with Fibaro HC2 3.572 beta
 
 <b>Informations:</b> Memory is preserved: The code is loaded only the first time in a virtual device main loop and reloaded only if virtual device is "saved" or application pool restarded.
 
-
+Find more information on http://forum.fibaro.com/
 
 
 Copyright (C) 2013 Jean-Christophe Vermandé
