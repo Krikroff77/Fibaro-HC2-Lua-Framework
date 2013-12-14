@@ -8,14 +8,14 @@
 -- Thanks to rafal.m for the decodeChunks function used when reponse body is "chunked"
 -- http://en.wikipedia.org/wiki/Chunked_transfer_encoding
 --
--- Version 1.0.2 [Dec 12, 2013]
+-- Version 1.0.3 [12-13-2013]
 -------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 if not Toolkit then error("You must add Toolkit", 2) end
 if not Toolkit.Net then Toolkit.Net = {
   -- private properties
   __header = "Toolkit.Net",
-  __version = "1.0.2",
+  __version = "1.0.3",
   __cr = string.char(13),
   __lf = string.char(10),
   __crLf = string.char(13, 10),
@@ -93,9 +93,9 @@ if not Toolkit.Net then Toolkit.Net = {
   end),
   __Http = {
     __header = "HttpRequest",
-    __version = "1.0.2",    
+    __version = "1.0.3",    
     __tcpSocket = nil,
-    __timeout = 0,
+    __timeout = 250,
     __waitBeforeReadMs = 25,
     __isConnected = false,
     __isChunked = false,
@@ -170,18 +170,21 @@ if not Toolkit.Net then Toolkit.Net = {
       self.__isChunked = false;
       self.__tcpSocket:setReadTimeout(self.__timeout);
       self.__url = uri;
+      self.__method = method;
       self.__headers = headers or {};
       self.__body = body or nil;
       
-      local r = method.." http://"..Toolkit.Net.__host..self.__url.." HTTP/1.1"..Toolkit.Net.__crLf;
+      local r = self.__method.." http://"..Toolkit.Net.__host..self.__url.." HTTP/1.1";
+      Toolkit.Net.__trace("%s.%s::request > %s with method %s", 
+          Toolkit.Net.__header, Toolkit.Net.__Http.__header, self.__url, self.__method);
       local p = "";
       if (Toolkit.Net.__port~=nil) then
         p = ":"..tostring(Toolkit.Net.__port);
       end
-      local h = "Host: "..Toolkit.Net.__host..p..Toolkit.Net.__crLf;
+      local h = "Host: "..Toolkit.Net.__host .. p;
       -- write to socket headers method a host!
-      self.__tcpSocket:write(r);
-      self.__tcpSocket:write(h);
+      Toolkit.Net.__writeHeader(self.__tcpSocket, r);
+      Toolkit.Net.__writeHeader(self.__tcpSocket, h);
       -- add headers if needed
       for i = 1, #self.__headers do
         Toolkit.Net.__writeHeader(self.__tcpSocket, self.__headers[i]);
@@ -255,6 +258,7 @@ if not Toolkit.Net then Toolkit.Net = {
       self.__url = nil;
       self.__headers = nil;
       self.__body = nil;
+      self.__method = nil;
       if pcall(function () assert(self.__tcpSocket~=Net.FTcpSocket) end) then
         Toolkit.Net.__trace("%s.%s::dispose > Successfully disposed", 
           Toolkit.Net.__header, Toolkit.Net.__Http.__header);
@@ -295,6 +299,7 @@ if not Toolkit.Net then Toolkit.Net = {
     return Toolkit.Net.__version;
   end)
 };
+
 Toolkit:traceEx("red", Toolkit.Net.__header.." loaded in memory...");
 -- benchmark code
 if (Toolkit.Debug) then Toolkit.Debug:benchmark(Toolkit.Net.__header.." lib", "elapsed time: %.3f cpu secs\n", "fragment", true); end;
