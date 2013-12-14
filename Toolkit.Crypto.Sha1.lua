@@ -3,6 +3,9 @@
 -- Toolkit.Crypto.Sha1 library extention part of Toolkit.Crypto
 -- SHA-1 secure hash computation, and HMAC-SHA1 signature computation,
 -- in pure Lua (tested on Lua 5.1)  based on Jeffrey Friedl work (Version 1 [May 28, 2009])
+--
+-- Version 1.0.0 [12-01-2013]
+--
 -- Copyright 2009 Jeffrey Friedl (jfriedl@yahoo.com)
 -- 
 -- http://www.itl.nist.gov/fipspubs/fip180-1.htm
