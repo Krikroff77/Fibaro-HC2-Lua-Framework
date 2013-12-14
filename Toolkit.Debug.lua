@@ -6,12 +6,13 @@
 --
 -- Copyright 2013 Jean-christophe Vermandé
 --
--- Version 1.0.1 [Dec 12, 2013]
+-- Version 1.0.1 [12-12-2013]
 -------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 if not Toolkit.Debug then Toolkit.Debug = { 
   __header = "Toolkit.Debug",
   __version = "1.0.1",
+  -- The os.clock function returns the number of seconds of CPU time for the program.
   __clocks = {["fragment"]=os.clock(), ["all"]=os.clock()},
   -- benchmarkPoint(name)
   -- (string)	name: name of benchmark point
