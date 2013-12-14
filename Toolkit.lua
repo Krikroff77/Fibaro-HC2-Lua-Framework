@@ -12,7 +12,8 @@
 -- Toolkit:trace("value is %d", 35); or Tk:trace("value is %d", 35);
 -- Toolkit.assertArg("argument", arg, "string"); or Tk.assertArg("argument", arg, "string");
 --
--- http://krikroff77.github.io/Fibaro-HC2-Toolkit-Framework/
+-- current release: http://krikroff77.github.io/Fibaro-HC2-Toolkit-Framework/
+-- latest release: https://github.com/Krikroff77/Fibaro-HC2-Toolkit-Framework/releases/latest
 --
 -- Memory is preserved: The code is loaded only the first time in a virtual device 
 -- main loop and reloaded only if application pool restarded.
