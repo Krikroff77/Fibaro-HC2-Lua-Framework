@@ -6,7 +6,7 @@
 --
 -- Copyright 2013 Jean-christophe Vermandé
 --
--- Version 1.0.0 [Dec 12, 2013]
+-- Version 1.0.0 [12-01-2013]
 -------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 if not Toolkit then error("You must add Toolkit", 2) end
@@ -50,7 +50,7 @@ if not Toolkit.Crypto then Toolkit.Crypto = {
   -- Given a string of 8 hex digits, return a W32 object representing that number
   fromHex = (function(hex)        
     Toolkit.assertArg("hex", hex, "string");
-    assert(string.lower(hex):match("^["..Toolkit.__hex.."]+$"));
+    assert(string.lower(hex):match("^["..Toolkit.hex.."]+$"));
     assert(#hex == 8);
     local W32 = { };
     for letter in hex:gmatch('.') do
