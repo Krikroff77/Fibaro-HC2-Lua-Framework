@@ -6,7 +6,7 @@ Hope that it will be useful!
 
 Current version 1.0.2 [12-13-2013]
 
-Tested on Lua 5.1 with Fibaro HC2 3.572 beta
+Tested on Lua 5.1 with Fibaro HC2 3.5xx
 
 <b>Informations:</b> Memory is preserved: The code is loaded only the first time in a virtual device main loop and reloaded only if application pool restarded.
 
