@@ -16,7 +16,7 @@ Example:
           Toolkit.assertArg("argument", arg, "string"); <b>or</b> Tk.assertArg("argument", arg, "string");
 
 
-![Init Debug](https://raw.github.com/Krikroff77/Fibaro-HC2-Toolkit-Framework/master/Images/init.png)
+![Init Debug](https://raw.github.com/Krikroff77/Fibaro-HC2-Toolkit-Framework/master/Images/init.PNG)
 
 Find more information on http://forum.fibaro.com/
 
