@@ -10,7 +10,7 @@ Tested on Lua 5.1 with Fibaro HC2 3.572 beta
 
 <b>Informations:</b> Memory is preserved: The code is loaded only the first time in a virtual device main loop and reloaded only if application pool restarded.
 
-Use: Toolkit or Tk shortcut to access Toolkit namespace members.
+Use: <b>Toolkit</b> or <b>Tk</b> shortcut to access Toolkit namespace members.
 Example: 
           Toolkit:trace("value is %d", 35); <b>or</b> Tk:trace("value is %d", 35);
           Toolkit.assertArg("argument", arg, "string"); <b>or</b> Tk.assertArg("argument", arg, "string");
