@@ -3,13 +3,15 @@
 -- Toolkit.Crypto.Base64 library extention part of Toolkit.Crypto
 -- Lua 5.1+ base64 v3.0 (c) 2009 by Alex Kloss <alexthkloss@web.de>
 -- licensed under the terms of the LGPL2
+--
+-- Version 1.0.0 [12-01-2013]
 -------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 if not Toolkit.Crypto then error("You must add Toolkit.Crypto", 2) end
 if not Toolkit.Crypto.Base64 then Toolkit.Crypto.Base64 = {  
   __header = "Toolkit.Crypto.Base64",
   __version = "1.0.0",
-  __c = Toolkit.__chars,
+  __c = Toolkit.chars,
   -- encoding
   encode = (function(self, data)
       Toolkit.assertArg("data", data, "string");
