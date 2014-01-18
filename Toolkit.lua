@@ -1,10 +1,10 @@
--------------------------------------------------------------------------------------------
+﻿-------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 -- Toolkit Framework, lua library extention for HC2, hope that it will be useful.
 -- This Framework is an addon for HC2 Toolkit application in a goal to aid the integration.
 -- Tested on Lua 5.1 with Fibaro HC2 3.572 beta
 --
--- Version 1.0.2 [12-13-2013]
+-- Version 1.0.3 [01-13-2014]
 --
 -- Use: Toolkit or Tk shortcut to access Toolkit namespace members.
 --
@@ -28,7 +28,7 @@
 -------------------------------------------------------------------------------------------
 if not Toolkit then Toolkit = { 
   __header = "Toolkit",
-  __version = "1.0.2",
+  __version = "1.0.3",
   __luaBase = "5.1.0", 
   __copyright = "Jean-Christophe Vermandé",
   __licence = [[

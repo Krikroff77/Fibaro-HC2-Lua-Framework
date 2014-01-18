@@ -1,4 +1,4 @@
--------------------------------------------------------------------------------------------
+﻿-------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 -- Toolkit.Net library extention
 -- Toolkit.Net.HttpRequest provide http request with advanced functions
@@ -174,7 +174,9 @@ if not Toolkit.Net then Toolkit.Net = {
       self.__headers = headers or {};
       self.__body = body or nil;
       
-      local r = self.__method.." http://"..Toolkit.Net.__host..self.__url.." HTTP/1.1";
+      --local r = self.__method.." http://"..Toolkit.Net.__host..self.__url.." HTTP/1.1";
+      --patch 18/12/2013
+      local r = self.__method.." "..self.__url.." HTTP/1.1";
       Toolkit.Net.__trace("%s.%s::request > %s with method %s", 
           Toolkit.Net.__header, Toolkit.Net.__Http.__header, self.__url, self.__method);
       local p = "";
