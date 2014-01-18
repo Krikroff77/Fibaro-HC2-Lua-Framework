@@ -4,7 +4,7 @@ Fibaro-HC2-Toolkit-Framework
 This Framework is a lua library for HC2 and is an addon for HC2 Toolkit application in a goal to aid the integration.
 Hope that it will be useful!
 
-Current version 1.0.2 [12-13-2013]
+Current version 1.0.3 [01-18-2014]
 
 Tested on Lua 5.1 with Fibaro HC2 3.5xx
 
@@ -21,6 +21,6 @@ Example:
 Find more information on http://forum.fibaro.com/
 
 
-Copyright (C) 2013 Jean-Christophe Vermandé
+Copyright (C) 2013-2014 Jean-Christophe Vermandé
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, orat your option) any later version.
