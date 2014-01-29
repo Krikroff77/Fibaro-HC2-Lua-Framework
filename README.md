@@ -24,3 +24,7 @@ Find more information on http://forum.fibaro.com/
 Copyright (C) 2013-2014 Jean-Christophe Vermandé
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, orat your option) any later version.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Krikroff77/fibaro-hc2-toolkit-framework/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
