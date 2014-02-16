@@ -1,7 +1,7 @@
--------------------------------------------------------------------------------------------
+﻿-------------------------------------------------------------------------------------------
 -- Make http request with custom headers
 -- Required library: Toolkit.Net 
--- Copyright 2013 Jean-christophe Vermandé
+-- Copyright 2013-2014 Jean-christophe Vermandé
 -------------------------------------------------------------------------------------------
 
 -- set Toolkit.Net.* trace enabled

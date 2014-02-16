@@ -4,7 +4,7 @@
 -- This Framework is an addon for HC2 Toolkit application in a goal to aid the integration.
 -- Tested on Lua 5.1 with Fibaro HC2 3.572 beta
 --
--- Version 1.0.3 [01-13-2014]
+-- Version 1.0.4 [01-13-2014]
 --
 -- Use: Toolkit or Tk shortcut to access Toolkit namespace members.
 --
@@ -18,7 +18,7 @@
 -- Memory is preserved: The code is loaded only the first time in a virtual device 
 -- main loop and reloaded only if application pool restarded.
 --
--- Copyright (C) 2013 Jean-Christophe Vermandé
+-- Copyright (C) 2013-2014 Jean-Christophe Vermandé
 -- 
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -28,11 +28,11 @@
 -------------------------------------------------------------------------------------------
 if not Toolkit then Toolkit = { 
   __header = "Toolkit",
-  __version = "1.0.3",
+  __version = "1.0.4",
   __luaBase = "5.1.0", 
   __copyright = "Jean-Christophe Vermandé",
   __licence = [[
-	Copyright (C) 2013 Jean-Christophe Vermandé
+	Copyright (C) 2013-2014 Jean-Christophe Vermandé
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -76,7 +76,7 @@ if not Toolkit then Toolkit = {
   -- hour (string/integer)
   -- min (string/integer)
   -- sec (string/integer)
-  comparableTime = (function(hour, min) return tonumber(string.format("%02d%02d%02d", hour, min, sec)) end),
+  comparableTime = (function(hour, min, sec) return tonumber(string.format("%02d%02d%02d", hour, min, sec)) end),
   -- isTraceEnabled
   -- (boolean)	get or set to enable or disable trace
   isTraceEnabled = true,
@@ -155,6 +155,9 @@ if not Toolkit then Toolkit = {
     Tk.assertArg("value", s, "string");
     return (string.gsub(s, "^%s*(.-)%s*$", "%1"));
   end),
+  -- isNaN(value)
+  -- return true is NaN or false if not NaN
+  isNaN = (function (x) return x ~= x end),
   -- filterByPredicate(table, predicate)
   -- table (table)		- table to filter
   -- predicate (function)	- function for predicate
@@ -175,7 +178,7 @@ if not Toolkit then Toolkit = {
             n = n + 1;    
         end
       end
-    end  
+    end
     return out, #out;
   end)
 };Toolkit:__frameworkHeader();Tk=Toolkit;
