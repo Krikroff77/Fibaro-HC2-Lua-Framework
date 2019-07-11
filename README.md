@@ -6,7 +6,7 @@ Hope that it will be useful!
 
 Current version 1.0.4
 
-Tested on Lua 5.1 with Fibaro HC2 3.5xx
+Tested on Lua 5.1 with Fibaro HC2 4.xx
 
 <b>Informations:</b> Memory is preserved: The code is loaded only the first time in a virtual device main loop and reloaded only if application pool restarded.
 
@@ -21,10 +21,6 @@ Example:
 Find more information on http://forum.fibaro.com/
 
 
-Copyright (C) 2013-2014 Jean-Christophe Vermandé
+Copyright (C) 2013-2019 Jean-Christophe Vermandé
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, orat your option) any later version.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Krikroff77/fibaro-hc2-toolkit-framework/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
