@@ -4,7 +4,7 @@
 -- SHA-1 secure hash computation, and HMAC-SHA1 signature computation,
 -- in pure Lua (tested on Lua 5.1)  based on Jeffrey Friedl work (Version 1 [May 28, 2009])
 --
--- Version 1.0.0 [12-01-2013]
+-- Version 1.0.1 [12-01-2013]
 --
 -- Copyright 2009 Jeffrey Friedl (jfriedl@yahoo.com)
 -- 
